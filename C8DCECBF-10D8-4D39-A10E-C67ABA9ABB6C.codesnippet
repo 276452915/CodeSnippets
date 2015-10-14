@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>afnetworking delegate</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark ----------   AFNetworking delegate     ---------------
+-(void)connectionDidSuccessed:(id)resultObject userInfo:(NSInteger)userInfo{
+    
+    NSLog(@"userInfo:%ld resultObject:%@",(long)userInfo,resultObject);
+    switch (userInfo) {
+        case 1:{
+            ResBaseModelBean *  baseBean = (ResBaseModelBean *)resultObject;
+            switch ([baseBean.status integerValue]) {
+                case  ResponseStatusSuccess:{
+
+                    break;
+                }
+                default:{
+                 
+                     break;
+                }
+            }
+            break;
+        }
+        default:
+            break;
+    }
+    
+}
+-(void)connectionDidFailed:(id)resultObject  userInfo:(NSInteger)userInfo{
+    NSLog(@"userInfo:%ld resultObject:%@",(long)userInfo,resultObject);
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>C8DCECBF-10D8-4D39-A10E-C67ABA9ABB6C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>AFNetworking delegate</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
